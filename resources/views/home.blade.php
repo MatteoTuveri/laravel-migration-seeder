@@ -4,7 +4,12 @@
 
 @section('content')
 <main>
-    <h1>Home page</h1>
+    <ol>
+        @foreach ($data as $item)
+            <li>{{ 'Treno:'.' '. $item['train_code'] . ' '.'Partenza:' .' '. $item['departure_time']}}</li>
+        @endforeach
+    </ol>
+
 </main>
 
 @endsection
