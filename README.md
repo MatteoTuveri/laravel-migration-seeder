@@ -67,9 +67,11 @@ npm install
 
 # inserisco i dati per il collegamento al db in env
 
-#creo migration es.
+#creo migration
 php artisan make:migration create_nome_tabella_table
+#aggiorno migration
 php artisan make:migration update_users_table --table=users
+#aggiungo un campo alla tabella
 php artisan make:migration add_phone_number_to_users_table
 
 #lanciare migration
@@ -98,14 +100,21 @@ php artisan make:controller NomeController
 
 #add yields in app and rename 'welcome' to 'home'
 ```
-## Install
 
+## Esercizio
+>Creaiamo un database da phpmyadmin (es train_db)
+>Creiamo una tabella trains e relativa Migration
+>Ogni treno dovrà avere:
 ```bash
-#install composer
-composer install
-
-#copy and paste .env.exemple and rename it in .env
-
-#install new key
-php artisan key:generate
+#Azienda
+#Stazione di partenza
+#Stazione di arrivo
+#Orario di partenza
+#Orario di arrivo
+#Codice Treno
+#Numero Carrozze
+#In orario
+#Cancellato
 ```
+>È probabile che siano necessarie altre colonne per far funzionare la tabella nel modo corretto
+>Create il Model Train e aggiungete un seeder per la classe Train usando FakerPHP.
